@@ -35,7 +35,7 @@ const Price = () => {
     },
   ];
   return (
-    <div className="cursor-pointer">
+    <div className="cursor-pointer" style={{ background: 'linear-gradient(135deg, #FDC830, #F37335)' }}>
       <NavTitle title="Shop by Price" icons={false} />
       <div className="font-titleFont">
         <ul className="flex flex-col gap-4 text-sm lg:text-base text-[#767676]">

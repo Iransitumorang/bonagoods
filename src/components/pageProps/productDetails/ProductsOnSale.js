@@ -3,7 +3,7 @@ import { SplOfferData } from "../../../constants";
 
 const ProductsOnSale = () => {
   return (
-    <div>
+    <div className="bg-[linear-gradient(135deg,#FDC830,#F37335)]">
       <h3 className="font-titleFont text-xl font-semibold mb-6 underline underline-offset-4 decoration-[1px]">
         Products on sale
       </h3>

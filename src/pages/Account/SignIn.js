@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { logoLight } from "../../assets/images";
+import logoLight from "../../assets/images/islogo.png";
 
 const SignIn = () => {
   // ============= Initial State Start here =============
@@ -46,7 +46,7 @@ const SignIn = () => {
   return (
     <div className="w-full h-screen flex items-center justify-center">
       <div className="w-1/2 hidden lgl:inline-flex h-full text-white">
-        <div className="w-[450px] h-full bg-primeColor px-10 flex flex-col gap-6 justify-center">
+        <div className="w-[450px] h-full bg-primeColor px-10 flex flex-col gap-6 justify-center" style={{ background: 'linear-gradient(135deg, #FDC830, #F37335)' }}>
           <Link to="/">
             <img src={logoLight} alt="logoImg" className="w-28" />
           </Link>
@@ -129,7 +129,7 @@ const SignIn = () => {
             </Link>
           </div>
         ) : (
-          <form className="w-full lgl:w-[450px] h-screen flex items-center justify-center">
+          <form className="w-full lgl:w-[450px] h-screen flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #FDC830, #F37335)' }}>
             <div className="px-6 py-4 w-full h-[90%] flex flex-col justify-center overflow-y-scroll scrollbar-thin scrollbar-thumb-primeColor">
               <h1 className="font-titleFont underline underline-offset-4 decoration-[1px] font-semibold text-3xl mdl:text-4xl mb-4">
                 Sign in

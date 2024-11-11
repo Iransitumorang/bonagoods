@@ -19,7 +19,7 @@ const SpecialCase = () => {
         </div>
       </Link>
       <Link to="/cart">
-        <div className="bg-white w-16 h-[70px] rounded-md flex flex-col gap-1 text-[#33475b] justify-center items-center shadow-testShadow overflow-x-hidden group cursor-pointer relative">
+        <div className="bg-white w-16 h-[70px] rounded-md flex flex-col gap-1 text-[#33475b] justify-center items-center shadow-testShadow overflow-x-hidden group cursor-pointer relative" style={{ background: 'linear-gradient(135deg, #FDC830, #F37335)' }}>
           <div className="flex justify-center items-center">
             <RiShoppingCart2Fill className="text-2xl -translate-x-12 group-hover:translate-x-3 transition-transform duration-200" />
 

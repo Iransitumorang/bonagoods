@@ -6,7 +6,7 @@ import Price from "./shopBy/Price";
 
 const ShopSideNav = () => {
   return (
-    <div className="w-full flex flex-col gap-6">
+    <div className="w-full flex flex-col gap-6" style={{ background: 'linear-gradient(135deg, #FDC830, #F37335)' }}>
       <Category icons={false} />
       <Color />
       <Brand />

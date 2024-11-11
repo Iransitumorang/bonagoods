@@ -30,7 +30,7 @@ const Category = () => {
     },
   ];
   return (
-    <div className="w-full">
+    <div className="w-full" style={{ background: 'linear-gradient(135deg, #FDC830, #F37335)' }}>
       <NavTitle title="Shop by Category" icons={false} />
       <div>
         <ul className="flex flex-col gap-4 text-sm lg:text-base text-[#767676]">

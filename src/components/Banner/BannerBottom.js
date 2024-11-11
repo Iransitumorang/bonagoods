@@ -4,7 +4,7 @@ import { CgRedo } from "react-icons/cg";
 
 const BannerBottom = () => {
   return (
-    <div className="w-full bg-white border-b-[1px] py-4 border-b-gray-200 px-4">
+    <div className="w-full bg-gradient-to-r from-[#FDC830] to-[#F37335] border-b-[1px] py-4 border-b-gray-200 px-4">
       <div className="max-w-container mx-auto h-20 flex flex-col md:flex-row justify-between items-center">
         <div className="flex items-center gap-2 w-72 shadow-sm hover:shadow-md duration-300">
           <span className="font-bold font-titleFont w-6 text-center">2</span>

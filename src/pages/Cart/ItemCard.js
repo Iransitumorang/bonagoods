@@ -10,7 +10,7 @@ import {
 const ItemCard = ({ item }) => {
   const dispatch = useDispatch();
   return (
-    <div className="w-full grid grid-cols-5 mb-4 border py-2">
+    <div className="w-full grid grid-cols-5 mb-4 border py-2" style={{ background: 'linear-gradient(135deg, #FDC830, #F37335)' }}>
       <div className="flex col-span-5 mdl:col-span-2 items-center gap-4 ml-4">
         <ImCross
           onClick={() => dispatch(deleteItem(item._id))}

@@ -19,7 +19,7 @@ const Journal = () => {
           numquam voluptate!
         </h1>
         <Link to="/shop">
-          <button className="w-52 h-10 bg-primeColor text-white hover:bg-black duration-300">
+          <button className="w-52 h-10 bg-gradient-to-r from-[#FDC830] to-[#F37335] text-white hover:bg-black duration-300">
             Continue Shopping
           </button>
         </Link>

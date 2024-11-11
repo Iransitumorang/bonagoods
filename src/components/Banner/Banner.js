@@ -100,7 +100,7 @@ const Banner = () => {
     ],
   };
   return (
-    <div className="w-full bg-white">
+    <div className="w-full" style={{ background: "linear-gradient(135deg, #FDC830, #F37335)" }}>
       <Slider {...settings}>
         <Link to="/offer">
           <div>
