@@ -69,7 +69,7 @@ const Header = () => {
                   transition={{ duration: 0.5 }}
                   className="w-[80%] h-full relative"
                 >
-                  <div className="w-full h-full bg-primeColor p-6">
+                  <div className="w-full h-full p-6">
                     <img
                       className="w-28 mb-6"
                       src={logo}
