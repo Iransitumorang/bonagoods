@@ -12,20 +12,28 @@ const HeaderBottom = () => {
   const [show, setShow] = useState(false);
   const [showUser, setShowUser] = useState(false);
   const navigate = useNavigate();
+  
   const ref = useRef();
+  const refUser = useRef();
+
   useEffect(() => {
     const handleClick = (e) => {
-      if (ref.current && ref.current.contains(e.target)) {
-        setShow(true);
-      } else {
+      // Menutup menu kategori jika klik di luar elemen
+      if (ref.current && !ref.current.contains(e.target)) {
         setShow(false);
       }
+
+      // Menutup user dropdown jika klik di luar elemen
+      if (refUser.current && !refUser.current.contains(e.target)) {
+        setShowUser(false);
+      }
     };
+
     document.body.addEventListener("click", handleClick);
     return () => {
       document.body.removeEventListener("click", handleClick);
     };
-  }, [ref]);
+  }, []);
 
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -93,49 +101,48 @@ const HeaderBottom = () => {
             <FaSearch className="w-5 h-5" />
             {searchQuery && (
               <div
-                className={`w-full mx-auto h-96 bg-white top-16 absolute left-0 z-50 overflow-y-scroll shadow-2xl scrollbar-hide cursor-pointer`}
+                className="w-full mx-auto h-96 bg-white top-16 absolute left-0 z-50 overflow-y-scroll shadow-2xl scrollbar-hide cursor-pointer"
               >
-                {searchQuery &&
-                  filteredProducts.map((item) => (
-                    <div
-                      onClick={() => {
-                        navigate(
-                          `/product/${item.productName
-                            .toLowerCase()
-                            .split(" ")
-                            .join("")}`,
-                          {
-                            state: {
-                              item: item,
-                            },
-                          }
-                        );
-                        setSearchQuery("");
-                        setFilteredProducts([]);
-                      }}
-                      key={item._id}
-                      className="max-w-[600px] h-28 bg-gray-100 mb-3 flex items-center gap-3"
-                    >
-                      <img className="w-24" src={item.img} alt="productImg" />
-                      <div className="flex flex-col gap-1">
-                        <p className="font-semibold text-lg">
-                          {item.productName}
-                        </p>
-                        <p className="text-xs">{item.des}</p>
-                        <p className="text-sm">
-                          Price:{" "}
-                          <span className="text-primeColor font-semibold">
-                            ${item.price}
-                          </span>
-                        </p>
-                      </div>
+                {filteredProducts.map((item) => (
+                  <div
+                    onClick={() => {
+                      navigate(
+                        `/product/${item.productName
+                          .toLowerCase()
+                          .split(" ")
+                          .join("")}`,
+                        {
+                          state: {
+                            item: item,
+                          },
+                        }
+                      );
+                      setSearchQuery("");
+                      setFilteredProducts([]);
+                    }}
+                    key={item._id}
+                    className="max-w-[600px] h-28 bg-gray-100 mb-3 flex items-center gap-3"
+                  >
+                    <img className="w-24" src={item.img} alt="productImg" />
+                    <div className="flex flex-col gap-1">
+                      <p className="font-semibold text-lg">
+                        {item.productName}
+                      </p>
+                      <p className="text-xs">{item.des}</p>
+                      <p className="text-sm">
+                        Price:{" "}
+                        <span className="text-primeColor font-semibold">
+                          ${item.price}
+                        </span>
+                      </p>
                     </div>
-                  ))}
+                  </div>
+                ))}
               </div>
             )}
           </div>
           <div className="flex gap-4 mt-2 lg:mt-0 items-center pr-6 cursor-pointer relative">
-            <div onClick={() => setShowUser(!showUser)} className="flex">
+            <div onClick={() => setShowUser(!showUser)} ref={refUser} className="flex">
               <FaUser />
               <FaCaretDown />
             </div>
