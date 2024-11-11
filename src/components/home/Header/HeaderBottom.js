@@ -32,6 +32,7 @@ const HeaderBottom = () => {
 
   const handleSearch = (e) => {
     setSearchQuery(e.target.value);
+    setFilteredProducts([]);
   };
 
   useEffect(() => {
@@ -97,7 +98,7 @@ const HeaderBottom = () => {
                 {searchQuery &&
                   filteredProducts.map((item) => (
                     <div
-                      onClick={() =>
+                      onClick={() => {
                         navigate(
                           `/product/${item.productName
                             .toLowerCase()
@@ -108,8 +109,10 @@ const HeaderBottom = () => {
                               item: item,
                             },
                           }
-                        )
-                      }
+                        );
+                        setSearchQuery("");
+                        setFilteredProducts([]);
+                      }}
                       key={item._id}
                       className="max-w-[600px] h-28 bg-gray-100 mb-3 flex items-center gap-3"
                     >
