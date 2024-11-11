@@ -28,7 +28,7 @@ const Footer = () => {
     }
   };
   return (
-    <div className="w-full bg-[#F5F5F3] py-20">
+    <div className="w-full bg-gradient-to-r from-[#FDC830] to-[#F37335] py-20">
       <div className="max-w-container mx-auto grid grid-cols-1 md:grid-cols-2  xl:grid-cols-6 px-4 gap-10">
         <div className="col-span-2">
           <FooterListTitle title=" More about BonaGoods  Shop" />
@@ -39,7 +39,7 @@ const Footer = () => {
             </p>
             <ul className="flex items-center gap-2">
               <a
-                href="https://www.youtube.com/@reactjsBD"
+                href="https://www.youtube.com/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -48,7 +48,7 @@ const Footer = () => {
                 </li>
               </a>
               <a
-                href="https://github.com/noorjsdivs"
+                href="https://github.com/Iransitumorang"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -57,7 +57,7 @@ const Footer = () => {
                 </li>
               </a>
               <a
-                href="https://www.facebook.com/Noorlalu143/"
+                href="https://www.facebook.com/profile.php?id=100003680996319&locale=id_ID"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -66,7 +66,7 @@ const Footer = () => {
                 </li>
               </a>
               <a
-                href="https://www.linkedin.com/in/noor-mohammad-ab2245193/"
+                href="https://www.linkedin.com/in/iran-situmorang/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -150,7 +150,7 @@ const Footer = () => {
                 </div>
                 <button
                   onClick={handleSubscription}
-                  className="bg-white text-lightText w-[30%] h-10 hover:bg-black hover:text-white duration-300 text-base tracking-wide"
+                  className="bg-gradient-to-r from-[#FDC830] to-[#F37335] text-lightText w-[30%] h-10 rounded-md hover:bg-black hover:text-white duration-300 text-base tracking-wide"
                 >
                   Subscribe
                 </button>
